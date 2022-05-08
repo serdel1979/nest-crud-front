@@ -26,11 +26,11 @@ export class ServiceProductoService {
     return this.httpClient.post<any>(`${this.productoURL}`, producto);
   }
 
-  public update(id: number, producto: Producto): Observable<any> {
+  public update(id: number, producto?: Producto): Observable<any> {
     return this.httpClient.put<any>(`${this.productoURL}/${id}`, producto);
   }
 
-  public delete(id: number): Observable<any> {
+  public delete(id?: number): Observable<any> {
     return this.httpClient.delete<any>(`${this.productoURL}/${id}`);
   }
 }
